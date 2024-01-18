@@ -1,6 +1,7 @@
-function Link(){
+function Link(props){
+    console.log(props)
     return(
-        <p>Hi</p>
+        <p>{props.title}</p>
     )
 }
 
