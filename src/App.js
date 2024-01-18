@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import Link from './Link';
 import './App.css';
 
 function App() {
+  const appName =  "react application"
+  const user = {
+    name: 'arun'
+  }
+  const profileValid = false;
+  const  handle = () => {
+    console.log("Button is clicked")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <h1 id='header' className='test'>lets Learn React</h1>
+    <p>Hi {appName} my name is {user.name}</p>
+    <p>Is it valid  :{`${profileValid}`}</p>
+    <p>{ profileValid ? 'Valid' :"invalid"}</p>
+    <button onClick={handle}>HI</button>
+    <Link />
+  </>
   );
 }
 
