@@ -1,21 +1,25 @@
-import Link from './Link';
+// import Link from './Link';
 import './App.css';
-import User from './User';
+// import User from './User';
+import Comment from './useState/Comment';
 
 
 function App() {
-  const users = ['Arun1', 'Arun2']
+  // const users = ['Arun1', 'Arun2']
   
   return (
   <>
-    <Link 
+    <h1 style={{textAlign: 'center'}}>useState Hook inn react</h1>
+    <Comment />
+    {/* <Link 
       title="data1" 
       content='Validate' 
       users={users} 
     />
     < User
       user="Nisha"
-    />
+    /> */}
+    
   </>
   );
 }
