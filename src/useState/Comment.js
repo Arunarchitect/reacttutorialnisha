@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 
 function Comment () {
     const [title, handleTitle] = useState('Good Morning');
+    
     // console.log(obj)
   return (
     <div>

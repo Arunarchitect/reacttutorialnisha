@@ -1,7 +1,10 @@
 // import Link from './Link';
 import './App.css';
 // import User from './User';
-import Comment from './useState/Comment';
+// import Comment from './useState/Comment';
+// import Loading from './useState/Loading';
+// import UserForm from './useState/UserForm';
+import Users from './useState/Users';
 
 
 function App() {
@@ -10,7 +13,8 @@ function App() {
   return (
   <>
     <h1 style={{textAlign: 'center'}}>useState Hook inn react</h1>
-    <Comment />
+    <Users/>
+    {/* <Loading /> */}
     {/* <Link 
       title="data1" 
       content='Validate' 
