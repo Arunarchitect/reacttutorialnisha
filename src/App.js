@@ -4,7 +4,8 @@ import './App.css';
 // import Comment from './useState/Comment';
 // import Loading from './useState/Loading';
 // import UserForm from './useState/UserForm';
-import Users from './useState/Users';
+// import Users from './useState/Users';
+import Theme from './useState/Theme';
 
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
   
   return (
   <>
-    <h1 style={{textAlign: 'center'}}>useState Hook inn react</h1>
-    <Users/>
+   
+    <Theme/>
     {/* <Loading /> */}
     {/* <Link 
       title="data1" 
