@@ -1,31 +1,17 @@
-// import Link from './Link';
 import './App.css';
-// import User from './User';
-// import Comment from './useState/Comment';
-// import Loading from './useState/Loading';
-// import UserForm from './useState/UserForm';
-// import Users from './useState/Users';
-import Theme from './useState/Theme';
+import {useState} from 'react';
+import User from './User';
 
 
 function App() {
-  // const users = ['Arun1', 'Arun2']
+  const [counter, setCounter] = useState(0)
   
   return (
-  <>
-   
-    <Theme/>
-    {/* <Loading /> */}
-    {/* <Link 
-      title="data1" 
-      content='Validate' 
-      users={users} 
-    />
-    < User
-      user="Nisha"
-    /> */}
-    
-  </>
+  <div className='App'>
+    <h1>Counter {counter}</h1>
+    <button onClick={()=>setCounter(value => value+1)}>+</button>
+    { counter<5 && <User counter={counter} />}
+  </div>
   );
 }
 

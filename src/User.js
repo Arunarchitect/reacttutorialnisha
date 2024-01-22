@@ -1,20 +1,21 @@
-// import React from 'react';
+import { useEffect } from "react"
+import { dbConnection } from "./dbConnection";
 
-// class User extends React.Component{
-//     constructor(props){
-//         super(props);
-//     }
-//     render(){
-//         //js code here
-//         console.log(this.props)
-//         console.log(React)
-//         const {user} = this.props;
-//         return(
-//             <div>
-//                 <h1>Welcome {user}</h1>
-//             </div>
-//         )
-//     }
-// }
+const User = ({counter}) => {
+    const conn = dbConnection();
+    useEffect(() => {
+        conn.connect();
+        
+        return () => {
+            conn.disconnect();
+        }
+    }, [])
+    
+    // console.log('outside useEffect')
+    
+    return  <div>
+        <h1>User Component</h1>
+    </div>
+}
 
-// export default User;
+export default User
