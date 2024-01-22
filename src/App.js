@@ -10,7 +10,7 @@ function App() {
   <div className='App'>
     <h1>Counter {counter}</h1>
     <button onClick={()=>setCounter(value => value+1)}>+</button>
-    { counter<5 && <User counter={counter} />}
+    <User  />
   </div>
   );
 }
