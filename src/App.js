@@ -1,5 +1,5 @@
 import './App.css';
-import Todos from './useReducer/todos';
+import User from './useMemoHook/User';
 
 
 
@@ -8,7 +8,7 @@ function App() {
   
   return (
   <div className='App'>
-    <Todos  />
+    <User  />
   </div>
   );
 }
