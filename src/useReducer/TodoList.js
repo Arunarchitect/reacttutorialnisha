@@ -1,7 +1,10 @@
 
 import { TODOS_ACTIONS } from "./todos"
+import { useContext } from "react"
+import TodosContext from "../context/TodosContext"
 
-const TodoList = ({todos, dispatch}) => {
+const TodoList = () => {
+  const {todos, dispatch} = useContext(TodosContext);
   return (
     <>
         {todos.map(todo => (

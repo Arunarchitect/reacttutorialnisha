@@ -1,5 +1,8 @@
 import { useReducer } from "react"
 import TodoList from "./TodoList";
+import Header from "./Header";
+import TodosContext from "../context/TodosContext";
+
 
 const initialState = [];
 
@@ -33,11 +36,17 @@ function init(initialState){
 }
 const Todos = () => {
     const [todos, dispatch]= useReducer(reducer, initialState, init);
+    const data = {
+        todos,
+        dispatch
+    }
 
 
     return (
-        <>
-            <h4>Todo List {todos.length} </h4>
+        <TodosContext.Provider value={data}>
+
+            {/* <h4>Todo List {todos.length} </h4> */}
+            <Header  />
             Add new Task :
             <input
                 type="text"
@@ -49,9 +58,9 @@ const Todos = () => {
             />
             <button onClick={()=> dispatch({type:TODOS_ACTIONS.RESET_TODOS, payload:initialState})}>Reset</button>
             <hr />
-            <TodoList todos={todos} dispatch={dispatch}/>
+            <TodoList />
             
-        </> 
+        </TodosContext.Provider> 
     )
 }
 
